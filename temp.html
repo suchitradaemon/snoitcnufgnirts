@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>String reverse, upper, lower, binary</title>
+		<script src="js/md5.min.js"></script>
+		<script src="js/stringfuncs.js" ></script>
+		<script src="js/TextHolder.js" ></script>
+		<script src="js/RowContainer.js" ></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"></link>
+	</head>
+	<body height="100%" width="100%">
+		<script type="text/javascript">
+			var config=[
+				{
+					'left':{'header':'Enter your string here','placeHolder':'Enter your text here','id':'input','name':'input','isEditable':true},
+				 	'right':{'header':'String to search','placeHolder':'The reverse of your text','id':'search','name':'search','isEditable':true}
+				},
+				{
+					'left':{'header':'Reverse','placeHolder':'Enter your text here','id':'reverse','name':'reverse','isEditable':false},
+				 	'right':{'header':'Reverse words','placeHolder':'Words in your text in reverse order','id':'revWords','name':'revWords','isEditable':false}
+				},
+				{
+					'left':{'header':'Upper case','placeHolder':'Your text in upper case','id':'upper','name':'upper','isEditable':false},
+				 	'right':{'header':'Lower case','placeHolder':'Your text in lower case','id':'lower','name':'lower','isEditable':false}
+				},
+				{
+					'left':{'header':'Binary','placeHolder':'Binary of your text','id':'binary','name':'binary','isEditable':false},
+				 	'right':{'header':'Rotate by','placeHolder':'Text with rotated characters','id':'rotate','name':'rotate','isEditable':false}
+				}
+			];
+			var rc=null;
+			for(var i=0;i<config.length;++i){
+				rc=new RowContainer(document.documentElement,config[i]);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+	<head>
+		<title>String reverse, upper, lower, binary</title>
+		<script src="js/stringfuncs.js" ></script>
+		<script src="js/md5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css"></link>
+	</head>
+	<body height="100%" width="100%">
+		<div width="100%" class="rowContainer">
+			<span class="left">
+				<div>
+					<span>
+						<label class="headerLabel">Enter your string here</label>
+					</span>
+				</div>
+				<div>
+					<span class="rightAlone">
+						<label id="count" class="metadataLabel"></label>
+						<label class="subheaderLabel">letters</label>&nbsp&nbsp
+						<label id="words" class="metadataLabel"></label>
+						<label class="subheaderLabel">words</label>&nbsp&nbsp
+						<label class="subheaderLabel">md5: </label>
+						<label id="md5" class="metadataLabel"></label>
+					</span>
+				</div>
+				<div><textarea placeholder="Enter your text here" rows="5" class="editableTextArea" id="input" onkeyup="updateAll()"></textarea> </div>
+			</span>
+			<span class="right">
+				<div><label class="headerLabel">String to search</label></div>
+				<div><textarea placeholder="What do you wanna search in your text?" rows="5" class="editableTextArea" width="100" onkeyup=""></textarea></div>
+			</span>
+		</div>
+		<!--<div width="100%" class="rowContainer">
+			<span class="left">
+				<span class="left">
+					<div><label class="headerLabel">count</label></div>
+					<div><label id="count" width="100%"/></div>
+				</span> 
+				<span class="right">
+					<div><label class="headerLabel">#words</label></div>
+					<div><label id="words" width="100%"/></div>
+				</span>
+			</span>
+			<span class="right">
+				<div><label class="headerLabel">MD5</label></div>
+				<div><label  id="md5" width="100%"></label></div>
+			</span>
+		</div>-->
+		<div width="100%" class="rowContainer">
+			<span class="left">
+				<div><label class="headerLabel">Reverse</label></div>
+				<div><textarea readonly placeholder="The reverse of your text" rows="5" id="reverse" width="100%" class="nonEditableTextArea"></textarea></div>
+			</span>  
+			<span class="right">
+				<div><label class="headerLabel">Reverse words</label></div>
+				<div><textarea readonly placeholder="Words in your text in reverse order" rows="5" id="revWords" width="100%" class="nonEditableTextArea"></textarea></div>
+			</span>
+		</div>
+		<div width="100%" class="rowContainer">
+			<span class="left">
+				<div><label class="headerLabel">Upper case</label></div>
+				<div><textarea readonly placeholder="Your text in upper case" rows="5" id="upper" width="100%" class="nonEditableTextArea"></textarea></div>
+			</span>
+			<span class="right">
+				<div><label class="headerLabel">Lower case</label></div>
+				<div><textarea readonly placeholder="Your text in lower case" rows="5" id="lower" width="100%" class="nonEditableTextArea"></textarea></div>
+			</span>
+		</div>
+		<div width="100%" class="rowContainer">
+			<span class="left">
+				<div><label class="headerLabel">binary</label></div>
+				<div><textarea readonly placeholder="Binary of your text" rows="5" id="binary" width="100%" class="nonEditableTextArea"></textarea></div>
+			</span>
+			<span class="right">
+				<div><label class="headerLabel">Rotate by</label>
+					<input type="text" id="rotateval" value="5" onkeyup="updateRotatedText()"/>
+					<label id="plus" onclick="addRotateVal()">+</label>
+					<label id="minus" onclick="subtractRotateVal()">-</label>
+				</div>
+				<div><textarea readonly placeholder="Text with rotated characters" rows="5" id="rotate" width="100%" class="nonEditableTextArea"></textarea></div>
+			</span>
+		</div>
+	</body>
+</html>

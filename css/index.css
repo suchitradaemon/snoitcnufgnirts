@@ -1,0 +1,30 @@
+.left{
+	width:48%;float:left
+}
+.right{
+	width:48%;float:right
+}
+.rightAlone{
+	float:right
+}
+.editableTextArea{
+	width:100%
+}
+.nonEditableTextArea{
+	width:100%;/*font-size:15px*/
+}
+.headerLabel{
+	color:#555
+}
+.subHeader{
+	padding:10px;
+}
+.subHeaderLabel{
+	color:#0000ff;font-size:11px;padding-left:4px;padding-right: 4px;
+}
+.metadataLabel{
+	color:#555;font-size:11px;
+}
+.rowContainer{
+	padding:20px;
+}
